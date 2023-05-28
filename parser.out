@@ -1,0 +1,100 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> s
+Rule 1     s -> e1 ENTER
+Rule 2     e1 -> PIZQ e2
+Rule 3     e2 -> e1 PDER
+Rule 4     e2 -> ABC
+
+Terminals, with rules where they appear
+
+ABC                  : 4
+ENTER                : 1
+PDER                 : 3
+PIZQ                 : 2
+error                : 
+
+Nonterminals, with rules where they appear
+
+e1                   : 1 3
+e2                   : 2
+s                    : 0
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . s
+    (1) s -> . e1 ENTER
+    (2) e1 -> . PIZQ e2
+
+    PIZQ            shift and go to state 3
+
+    s                              shift and go to state 1
+    e1                             shift and go to state 2
+
+state 1
+
+    (0) S' -> s .
+
+
+
+state 2
+
+    (1) s -> e1 . ENTER
+
+    ENTER           shift and go to state 4
+
+
+state 3
+
+    (2) e1 -> PIZQ . e2
+    (3) e2 -> . e1 PDER
+    (4) e2 -> . ABC
+    (2) e1 -> . PIZQ e2
+
+    ABC             shift and go to state 7
+    PIZQ            shift and go to state 3
+
+    e2                             shift and go to state 5
+    e1                             shift and go to state 6
+
+state 4
+
+    (1) s -> e1 ENTER .
+
+    $end            reduce using rule 1 (s -> e1 ENTER .)
+
+
+state 5
+
+    (2) e1 -> PIZQ e2 .
+
+    ENTER           reduce using rule 2 (e1 -> PIZQ e2 .)
+    PDER            reduce using rule 2 (e1 -> PIZQ e2 .)
+
+
+state 6
+
+    (3) e2 -> e1 . PDER
+
+    PDER            shift and go to state 8
+
+
+state 7
+
+    (4) e2 -> ABC .
+
+    ENTER           reduce using rule 4 (e2 -> ABC .)
+    PDER            reduce using rule 4 (e2 -> ABC .)
+
+
+state 8
+
+    (3) e2 -> e1 PDER .
+
+    ENTER           reduce using rule 3 (e2 -> e1 PDER .)
+    PDER            reduce using rule 3 (e2 -> e1 PDER .)
+
