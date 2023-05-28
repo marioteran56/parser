@@ -88,4 +88,4 @@ La cadena ingresada pertenece al lenguaje.
 
 ## Streamlit
 
-Se puede acceder a la aplicación web en el siguiente [enlace](https://share.streamlit.io/alejandrogalaz1/reconocedor-de-cadenas/main/app.py).
+Se puede acceder a la aplicación web en el siguiente [enlace](https://marioteran56-parser-app-nub83r.streamlit.app/).
