@@ -1,4 +1,4 @@
-# Reconocedor de cadenas
+# Reconocedor de Cadenas
 
 ## Descripción
 
