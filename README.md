@@ -39,13 +39,23 @@ E_1 \rightarrow PIZQ E_2 \newline
 E_2 \rightarrow E_1 PDER | ABC
 $$
 
+## Requerimientos
+
+Para poder ejecutar el proyecto se debe tener instalado lo siguiente:
+
+- Python 3
+- Streamlit
+- PLY
+
 ## Ejecución
 
-Para ejecutar el programa se debe ejecutar el siguiente comando:
+El proyecto está implementado para que sea ejecutado en un servidor de Streamlit, por lo que se debe ejecutar el siguiente comando:
 
 ```bash
-python3 parser.py
+streamlit run app.py
 ```
+
+A lo que se abrirá una ventana en el navegador con la aplicación web.
 
 ## Ejemplos
 
